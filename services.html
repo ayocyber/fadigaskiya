@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Services — Fadi Gaskiya Aluminium Company. End-to-end concept design, construction, civil engineering, facility management and fabrication in Sokoto State, Nigeria.">
+<title>Services — Fadi Gaskiya Aluminium Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-brand:#1e5db8; --blue-light:#2d7dd2; --blue-dark:#0e3a7a;
+  --gold:#f0a500; --gold-light:#ffc933; --gold-dark:#b87d00;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-xl:32px;
+  --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+}
+[data-theme="dark"] {
+  --bg:#080f1e; --bg2:#0a1628; --bg3:#0d1e38; --bg4:#111e35;
+  --glass:rgba(255,255,255,0.03); --glass-border:rgba(255,255,255,0.07);
+  --glass-hover:rgba(30,93,184,0.12); --glass-hover-border:rgba(30,93,184,0.35);
+  --nav-bg:rgba(8,15,30,0.88); --nav-shadow:0 1px 0 rgba(255,255,255,0.05);
+  --text:#ffffff; --text2:rgba(255,255,255,0.62); --text3:rgba(255,255,255,0.36);
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --card-shadow:0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  --glow-blue:0 0 60px rgba(30,93,184,0.2); --glow-gold:0 0 40px rgba(240,165,0,0.15);
+  --footer:#050b16;
+  --tog-bg:rgba(255,255,255,0.08); --tog-border:rgba(255,255,255,0.15);
+  --input-bg:rgba(255,255,255,0.04); --input-border:rgba(255,255,255,0.1);
+  --input-focus:rgba(30,93,184,0.3);
+}
+[data-theme="light"] {
+  --bg:#f0f4fb; --bg2:#e8eef8; --bg3:#dde6f5; --bg4:#d4dff0;
+  --glass:rgba(255,255,255,0.75); --glass-border:rgba(30,93,184,0.12);
+  --glass-hover:rgba(30,93,184,0.06); --glass-hover-border:rgba(30,93,184,0.28);
+  --nav-bg:rgba(240,244,251,0.92); --nav-shadow:0 1px 0 rgba(30,93,184,0.08);
+  --text:#0a1628; --text2:#2c4a7a; --text3:#6a86a8;
+  --border:rgba(30,93,184,0.10); --border2:rgba(30,93,184,0.18);
+  --card-shadow:0 20px 60px rgba(30,93,184,0.10), 0 0 0 1px rgba(30,93,184,0.08);
+  --glow-blue:0 0 40px rgba(30,93,184,0.08); --glow-gold:0 0 30px rgba(240,165,0,0.08);
+  --footer:#d0dcee;
+  --tog-bg:rgba(30,93,184,0.10); --tog-border:rgba(30,93,184,0.22);
+  --input-bg:rgba(255,255,255,0.9); --input-border:rgba(30,93,184,0.15);
+  --input-focus:rgba(30,93,184,0.2);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:inherit;}
+ul{list-style:none;}
+body,nav,section,footer,div,a,button,input,textarea,select{
+  transition:background-color .35s var(--ease-out),border-color .35s var(--ease-out),color .25s var(--ease-out),box-shadow .35s var(--ease-out);
+}
+.cur{width:10px;height:10px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .25s;}
+.cur-ring{width:32px;height:32px;border:1.5px solid rgba(30,93,184,0.6);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .12s ease,width .25s,height .25s,border-color .25s;}
+body:not(:hover) .cur{opacity:0;}
+.container{max-width:1260px;margin:0 auto;padding:0 48px;}
+.section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.section-eyebrow::before{content:'';width:32px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,62px);line-height:.95;letter-spacing:1.5px;color:var(--text);}
+.section-title span{color:var(--gold);}
+.section-sub{font-size:16px;line-height:1.75;color:var(--text2);max-width:560px;}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s var(--ease-out),transform .75s var(--ease-out);}
+.reveal.up{opacity:1;transform:none;}
+.reveal-d1{transition-delay:.08s;}.reveal-d2{transition-delay:.16s;}.reveal-d3{transition-delay:.24s;}.reveal-d4{transition-delay:.32s;}.reveal-d5{transition-delay:.40s;}
+.gold-text{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#08111e;padding:15px 34px;border-radius:50px;font-size:14px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border:none;box-shadow:0 8px 28px rgba(240,165,0,0.38);transition:transform .28s var(--ease-bounce),box-shadow .28s;position:relative;overflow:hidden;}
+.btn-gold::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.22),transparent);opacity:0;transition:opacity .3s;}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(240,165,0,0.52);}
+.btn-gold:hover::before{opacity:1;}
+.btn-outline{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--text);padding:14px 32px;border-radius:50px;font-size:14px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1.5px solid var(--border2);backdrop-filter:blur(10px);transition:transform .28s var(--ease-bounce),border-color .28s,background .28s;}
+.btn-outline:hover{transform:translateY(-3px);border-color:var(--blue-light);background:rgba(30,93,184,0.1);}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,box-shadow .4s,padding .3s;}
+#nav.stuck{background:var(--nav-bg);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:var(--nav-shadow);padding:14px 48px;}
+.nav-logo{display:flex;align-items:center;gap:13px;}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:21px;color:#fff;box-shadow:0 4px 18px rgba(30,93,184,0.45);position:relative;overflow:hidden;flex-shrink:0;}
+.logo-mark::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.18),transparent);}
+.logo-words span:first-child{display:block;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2.5px;color:var(--text);line-height:1.1;}
+.logo-words span:last-child{display:block;font-size:9.5px;font-weight:600;letter-spacing:3.5px;color:var(--gold);text-transform:uppercase;}
+.nav-menu{display:flex;align-items:center;gap:36px;}
+.nav-menu a{font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text2);position:relative;transition:color .25s;}
+.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1.5px;background:var(--gold);border-radius:2px;transition:width .3s var(--ease-out);}
+.nav-menu a:hover,.nav-menu a.on{color:var(--text);}
+.nav-menu a:hover::after,.nav-menu a.on::after{width:100%;}
+.nav-actions{display:flex;align-items:center;gap:14px;}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#0a1628 !important;padding:10px 22px;border-radius:26px;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 4px 18px rgba(240,165,0,0.38);transition:transform .25s var(--ease-bounce),box-shadow .25s;}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(240,165,0,0.5);}
+.nav-cta::after{display:none !important;}
+.tog{width:44px;height:25px;background:var(--tog-bg);border:1.5px solid var(--tog-border);border-radius:20px;cursor:pointer;position:relative;outline:none;flex-shrink:0;}
+.tog-thumb{position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:var(--gold);box-shadow:0 2px 8px rgba(240,165,0,0.5);display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .4s var(--ease-bounce);}
+[data-theme="light"] .tog-thumb{transform:translateX(19px);}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .3s;}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.x span:nth-child(2){opacity:0;}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob-menu{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--nav-bg);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);z-index:999;align-items:center;justify-content:center;gap:28px;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-size:20px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);transition:color .2s;}
+.mob-menu a:hover{color:var(--gold);}
+@keyframes rise{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+@keyframes imgPan{0%{transform:scale(1.06) translateX(0);}100%{transform:scale(1.06) translateX(-2%)}}
+@keyframes hpulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.7);opacity:.45;}}
+#page-hero{position:relative;min-height:52vh;display:flex;flex-direction:column;overflow:hidden;}
+.ph-bg{position:absolute;inset:0;z-index:0;}
+.ph-bg img{width:100%;height:100%;object-fit:cover;animation:imgPan 18s ease-in-out alternate infinite;}
+.ph-ov1{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(5,10,22,.92) 0%,rgba(5,10,22,.70) 50%,rgba(5,10,22,.30) 100%);}
+.ph-ov2{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 70% 90% at 0% 100%,rgba(30,93,184,.30) 0%,transparent 60%);}
+.ph-grain{position:absolute;inset:0;z-index:3;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:256px;pointer-events:none;}
+.ph-inner{position:relative;z-index:10;flex:1;max-width:1260px;width:100%;margin:0 auto;padding:160px 56px 90px;display:flex;flex-direction:column;justify-content:flex-end;}
+.ph-breadcrumb{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:20px;animation:rise .6s ease both;}
+.ph-breadcrumb a{color:var(--gold);transition:opacity .2s;}
+.ph-breadcrumb a:hover{opacity:.7;}
+.ph-breadcrumb span{color:rgba(255,255,255,.25);}
+.ph-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,8vw,104px);line-height:.88;letter-spacing:2px;animation:rise .75s .1s ease both;margin-bottom:22px;}
+.ph-h1 .l1{display:block;color:#fff;}
+.ph-h1 .l2{display:block;color:var(--gold);}
+.ph-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,.55);max-width:520px;animation:rise .75s .2s ease both;margin-bottom:32px;}
+.ph-chips{display:flex;flex-wrap:wrap;gap:10px;animation:rise .75s .3s ease both;}
+.ph-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);border-radius:30px;padding:7px 16px;font-size:12px;font-weight:600;letter-spacing:.5px;color:rgba(255,255,255,.70);transition:background .25s,border-color .25s;}
+.ph-chip:hover{background:rgba(30,93,184,.25);border-color:rgba(30,93,184,.4);color:#fff;}
+.ph-chip-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:hpulse 2.2s infinite;flex-shrink:0;}
+#srv-intro{padding:80px 0;background:var(--bg2);}
+.sri-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.sri-content .section-sub{margin-top:16px;}
+.sri-mission{margin-top:32px;padding:24px 28px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);border-left:3px solid var(--gold);}
+.sri-mission p{font-size:15px;font-style:italic;color:var(--text2);line-height:1.75;}
+.sri-mission cite{display:block;margin-top:10px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+.sri-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.sri-stat{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:24px 20px;text-align:center;transition:background .3s,border-color .3s,transform .3s;}
+.sri-stat:hover{background:var(--glass-hover);border-color:var(--glass-hover-border);transform:translateY(-4px);}
+.sri-stat-n{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;}
+.sri-stat-l{font-size:10.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-top:4px;}
+#services{padding:110px 0;background:var(--bg);}
+.srv-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:64px;}
+.srv-header-right{display:flex;flex-direction:column;align-items:flex-end;gap:16px;}
+.srv-header-right .section-sub{text-align:right;}
+.srv-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;}
+.srv-filter{padding:8px 18px;border-radius:30px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .25s;}
+.srv-filter:hover,.srv-filter.active{background:rgba(30,93,184,.15);border-color:var(--blue-light);color:var(--text);}
+.srv-filter.active{background:linear-gradient(135deg,rgba(30,93,184,.3),rgba(45,125,210,.2));border-color:var(--blue-light);color:#fff;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.srv-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:0;overflow:hidden;position:relative;transition:transform .35s var(--ease-out),box-shadow .35s,border-color .35s,background .35s;cursor:default;display:flex;flex-direction:column;}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue-brand),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-out);}
+.srv-card:hover{transform:translateY(-7px);box-shadow:var(--card-shadow),var(--glow-blue);border-color:var(--glass-hover-border);background:var(--glass-hover);}
+.srv-card:hover::before{transform:scaleX(1);}
+.srv-card-img{position:relative;height:180px;overflow:hidden;}
+.srv-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out);}
+.srv-card:hover .srv-card-img img{transform:scale(1.06);}
+.srv-card-img-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,15,30,.75) 100%);}
+.srv-card-badge{position:absolute;top:12px;right:12px;background:rgba(8,15,30,.75);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:5px 11px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);}
+.srv-card-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.srv-card-num{font-family:'Bebas Neue',sans-serif;font-size:64px;line-height:1;color:var(--border);position:absolute;bottom:8px;right:16px;pointer-events:none;}
+.srv-card-ico{width:48px;height:48px;background:linear-gradient(135deg,rgba(30,93,184,.28),rgba(45,125,210,.18));border:1px solid rgba(30,93,184,.32);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.srv-card h3{font-size:16.5px;font-weight:700;margin-bottom:9px;color:var(--text);}
+.srv-card p{font-size:13.5px;color:var(--text2);line-height:1.7;flex:1;}
+.srv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+.srv-tag{font-size:11px;font-weight:600;color:var(--blue-light);background:rgba(30,93,184,.12);border:1px solid rgba(30,93,184,.22);padding:3px 10px;border-radius:20px;}
+.srv-cta-row{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);}
+.srv-cta-link{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:6px;transition:gap .25s;}
+.srv-cta-link:hover{gap:10px;}
+#process{padding:110px 0;background:var(--bg2);}
+.proc-header{text-align:center;margin-bottom:72px;}
+.proc-header .section-eyebrow{justify-content:center;}
+.proc-header .section-sub{margin:16px auto 0;}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.proc-steps::before{content:'';position:absolute;top:44px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:1px;background:linear-gradient(90deg,var(--gold),var(--blue-light),var(--gold));opacity:.35;}
+.proc-step{text-align:center;padding:0 20px;position:relative;}
+.proc-step-circle{width:88px;height:88px;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 24px;box-shadow:0 12px 36px rgba(30,93,184,.4);position:relative;z-index:2;transition:transform .3s var(--ease-bounce);}
+.proc-step:hover .proc-step-circle{transform:scale(1.1);}
+.proc-step-n{position:absolute;top:-8px;right:-8px;width:26px;height:26px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#08111e;}
+.proc-step h4{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.proc-step p{font-size:13px;color:var(--text2);line-height:1.65;}
+#why{padding:110px 0;background:var(--bg3);}
+.why-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.why-visual{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--card-shadow);}
+.why-visual img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out);}
+.why-visual:hover img{transform:scale(1.04);}
+.why-visual-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,93,184,.28),rgba(8,15,30,.2));}
+.why-badge{position:absolute;bottom:20px;left:20px;background:rgba(8,15,30,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:11px;}
+.why-badge-ico{width:34px;height:34px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.why-badge-t{font-size:12px;font-weight:700;color:#fff;}
+.why-badge-s{font-size:10.5px;color:rgba(255,255,255,.45);}
+.why-list{display:flex;flex-direction:column;gap:14px;margin-top:32px;}
+.why-item{display:flex;gap:15px;align-items:flex-start;padding:16px;border-radius:var(--radius-md);background:var(--glass);border:1px solid var(--glass-border);transition:background .3s,border-color .3s,transform .3s;}
+.why-item:hover{background:var(--glass-hover);border-color:var(--glass-hover-border);transform:translateX(5px);}
+.why-ico{width:40px;height:40px;flex-shrink:0;background:linear-gradient(135deg,rgba(30,93,184,.3),rgba(45,125,210,.2));border:1px solid rgba(30,93,184,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.why-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px;color:var(--text);}
+.why-item p{font-size:13px;color:var(--text2);line-height:1.6;}
+#cta-banner{padding:100px 0;background:linear-gradient(135deg,var(--blue-brand),var(--blue-dark));position:relative;overflow:hidden;}
+#cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 15% 50%,rgba(255,255,255,.06) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 85% 50%,rgba(240,165,0,.12) 0%,transparent 60%);}
+.cta-inner{position:relative;z-index:1;text-align:center;}
+.cta-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:20px;justify-content:center;}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:28px;height:1px;background:rgba(255,255,255,.3);}
+.cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,6vw,78px);line-height:.92;letter-spacing:1.5px;color:#fff;margin-bottom:20px;}
+.cta-h span{color:var(--gold-light);}
+.cta-sub{font-size:16px;color:rgba(255,255,255,.58);max-width:500px;margin:0 auto 40px;line-height:1.75;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.cta-btn-ghost{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.10);color:#fff;padding:14px 32px;border-radius:50px;font-size:14px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.25);backdrop-filter:blur(10px);transition:transform .28s var(--ease-bounce),background .28s,border-color .28s;}
+.cta-btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.45);}
+.cta-contacts{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:36px;}
+.cta-contact-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.65);font-size:14px;}
+.cta-contact-item a{color:rgba(255,255,255,.9);font-weight:600;transition:color .2s;}
+.cta-contact-item a:hover{color:var(--gold-light);}
+footer{background:var(--footer);padding:72px 0 0;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;}
+.foot-brand p{font-size:13.5px;color:var(--text2);line-height:1.75;margin-top:18px;max-width:280px;}
+.foot-brand .nav-logo{margin-bottom:0;}
+.foot-socials{display:flex;gap:10px;margin-top:22px;}
+.foot-soc{width:38px;height:38px;border-radius:10px;background:var(--glass);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .25s,border-color .25s,transform .25s;}
+.foot-soc:hover{background:var(--glass-hover);border-color:var(--glass-hover-border);transform:translateY(-2px);}
+.foot-col h5{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:18px;}
+.foot-col ul li{margin-bottom:10px;}
+.foot-col ul a{font-size:13.5px;color:var(--text2);transition:color .2s;}
+.foot-col ul a:hover{color:var(--gold);}
+.nl-label{font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.5;}
+.nl-wrap{display:flex;border-radius:10px;overflow:hidden;border:1px solid var(--input-border);background:var(--input-bg);}
+.nl-input{flex:1;background:transparent;border:none;padding:11px 14px;font-size:13px;color:var(--text);outline:none;font-family:inherit;}
+.nl-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;padding:11px 18px;font-size:16px;font-weight:700;color:#08111e;transition:opacity .2s;}
+.nl-btn:hover{opacity:.85;}
+.foot-bottom{margin-top:56px;padding:22px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.foot-bottom p{font-size:12.5px;color:var(--text3);}
+.foot-bottom a{color:var(--text2);transition:color .2s;}
+.foot-bottom a:hover{color:var(--gold);}
+@media(max-width:1024px){
+  .srv-grid{grid-template-columns:repeat(2,1fr);}
+  .proc-steps{grid-template-columns:repeat(2,1fr);gap:32px;}
+  .proc-steps::before{display:none;}
+  .why-split,.sri-grid{grid-template-columns:1fr;gap:40px;}
+  .srv-header{grid-template-columns:1fr;}
+  .srv-header-right{align-items:flex-start;}
+  .srv-header-right .section-sub{text-align:left;}
+  .srv-filters{justify-content:flex-start;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .container{padding:0 24px;}
+  #nav{padding:16px 24px;}
+  #nav.stuck{padding:12px 24px;}
+  .nav-menu,.nav-cta,.tog{display:none;}
+  .burger{display:flex;}
+  .ph-inner{padding:110px 24px 60px;}
+  .sri-stats{grid-template-columns:repeat(2,1fr);}
+  .srv-grid{grid-template-columns:1fr;}
+  .proc-steps{grid-template-columns:1fr;gap:24px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+  .cta-contacts{flex-direction:column;gap:14px;}
+  .ph-chips{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html" class="on">Services</a>
+  <a href="index.html#features">About Us</a>
+  <a href="index.html#portfolio">Projects</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="tel:08038466792" style="color:var(--gold);">📞 Call Us</a>
+</div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark">FG</div>
+    <div class="logo-words">
+      <span>Fadi Gaskiya</span>
+      <span> Aluminium Company</span>
+    </div>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="on">Services</a></li>
+    <li><a href="index.html#features">About Us</a></li>
+    <li><a href="index.html#portfolio">Projects</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="tog" id="tog" aria-label="Toggle theme">
+      <div class="tog-thumb" id="togIco">☀️</div>
+    </button>
+    <a href="tel:08038466792" class="nav-cta">📞 Call Now</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="page-hero">
+  <div class="ph-bg">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80" alt="Fadi Gaskiya Services"/>
+  </div>
+  <div class="ph-ov1"></div>
+  <div class="ph-ov2"></div>
+  <div class="ph-grain"></div>
+  <div class="ph-inner">
+    <div class="ph-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color:rgba(255,255,255,.65);">Services</span>
+    </div>
+    <h1 class="ph-h1">
+      <span class="l1">Our</span>
+      <span class="l2">Services</span>
+    </h1>
+    <p class="ph-desc">
+      From concept design to post-completion facility management — we plan, build, engineer, and deliver full building infrastructure with precision and pride across Sokoto State and beyond.
+    </p>
+    <div class="ph-chips">
+      <div class="ph-chip"><span class="ph-chip-dot"></span>Design to Delivery</div>
+      <div class="ph-chip"><span class="ph-chip-dot"></span>Sokoto State, Nigeria</div>
+      <div class="ph-chip"><span class="ph-chip-dot"></span>5 Core Services</div>
+      <div class="ph-chip"><span class="ph-chip-dot"></span>500+ Projects Completed</div>
+    </div>
+  </div>
+</section>
+
+<section id="srv-intro">
+  <div class="container">
+    <div class="sri-grid">
+      <div class="sri-content">
+        <div class="section-eyebrow reveal">Who We Are</div>
+        <h2 class="section-title reveal reveal-d1">The Best In <span>Business</span></h2>
+        <p class="section-sub reveal reveal-d2">
+          Fadi Gaskiya Aluminium Company is a household name in Nigeria's construction industry — carrying projects from first sketch to final handover and beyond. Our name means <em>truth</em>, and truth is how we do business.
+        </p>
+        <div class="sri-mission reveal reveal-d3">
+          <p>"We strongly believe in providing perfect services to our customers — consistently delivering high-quality and timely projects through innovation and professionalism."</p>
+          <cite>— Fadi Gaskiya Aluminium Company</cite>
+        </div>
+      </div>
+      <div class="sri-stats reveal reveal-d2">
+        <div class="sri-stat">
+          <div class="sri-stat-n">10+</div>
+          <div class="sri-stat-l">Years of Excellence</div>
+        </div>
+        <div class="sri-stat">
+          <div class="sri-stat-n">500+</div>
+          <div class="sri-stat-l">Projects Completed</div>
+        </div>
+        <div class="sri-stat">
+          <div class="sri-stat-n">5</div>
+          <div class="sri-stat-l">Core Services</div>
+        </div>
+        <div class="sri-stat">
+          <div class="sri-stat-n">100%</div>
+          <div class="sri-stat-l">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="srv-header">
+      <div>
+        <div class="section-eyebrow reveal">What We Offer</div>
+        <h2 class="section-title reveal reveal-d1">Design, Build <span>&amp; Manage</span></h2>
+      </div>
+      <div class="srv-header-right">
+        <p class="section-sub reveal">Every service is backed by our team's expertise, quality materials, and a commitment to on-time delivery — from first concept to long-term facility care.</p>
+      </div>
+    </div>
+
+    <div class="srv-grid" id="srvGrid">
+
+      <div class="srv-card reveal reveal-d1" data-cat="design">
+        <div class="srv-card-img">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Concept Design and Planning"/>
+          <div class="srv-card-img-ov"></div>
+          <div class="srv-card-badge">Design &amp; Planning</div>
+        </div>
+        <div class="srv-card-body">
+          <div class="srv-card-ico">📐</div>
+          <h3>End-to-End Concept Design and Planning</h3>
+          <p>From first sketch to buildable plan — we shape your project's concept, layout, and specifications, aligning vision, budget, and site realities before a single block is laid.</p>
+          <div class="srv-tags">
+            <span class="srv-tag">Concept Design</span>
+            <span class="srv-tag">Planning</span>
+            <span class="srv-tag">Feasibility</span>
+          </div>
+          <div class="srv-cta-row">
+            <a href="index.html#contact" class="srv-cta-link">Request a Quote →</a>
+          </div>
+        </div>
+        <div class="srv-card-num">01</div>
+      </div>
+
+      <div class="srv-card reveal reveal-d2" data-cat="construction">
+        <div class="srv-card-img">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Building Construction and Execution"/>
+          <div class="srv-card-img-ov"></div>
+          <div class="srv-card-badge">Construction</div>
+        </div>
+        <div class="srv-card-body">
+          <div class="srv-card-ico">🏗️</div>
+          <h3>Seamless Building Construction &amp; Execution</h3>
+          <p>Full-scale construction management from groundbreaking to handover. Our team coordinates materials, labour, and timelines to execute your project smoothly and on schedule.</p>
+          <div class="srv-tags">
+            <span class="srv-tag">Construction</span>
+            <span class="srv-tag">Site Management</span>
+            <span class="srv-tag">Execution</span>
+          </div>
+          <div class="srv-cta-row">
+            <a href="index.html#contact" class="srv-cta-link">Request a Quote →</a>
+          </div>
+        </div>
+        <div class="srv-card-num">02</div>
+      </div>
+
+      <div class="srv-card reveal reveal-d3" data-cat="engineering">
+        <div class="srv-card-img">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Civil Engineering and Infrastructure"/>
+          <div class="srv-card-img-ov"></div>
+          <div class="srv-card-badge">Engineering</div>
+        </div>
+        <div class="srv-card-body">
+          <div class="srv-card-ico">🛠️</div>
+          <h3>Civil Engineering &amp; Infrastructure Integration</h3>
+          <p>Structural, drainage, road, and utility works engineered to code and integrated cleanly with the rest of your build — the technical backbone that keeps every project sound.</p>
+          <div class="srv-tags">
+            <span class="srv-tag">Civil Works</span>
+            <span class="srv-tag">Infrastructure</span>
+            <span class="srv-tag">Structural</span>
+          </div>
+          <div class="srv-cta-row">
+            <a href="index.html#contact" class="srv-cta-link">Request a Quote →</a>
+          </div>
+        </div>
+        <div class="srv-card-num">03</div>
+      </div>
+
+      <div class="srv-card reveal reveal-d1" data-cat="facility">
+        <div class="srv-card-img">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Post-Completion Facility Management"/>
+          <div class="srv-card-img-ov"></div>
+          <div class="srv-card-badge">Facility Mgmt</div>
+        </div>
+        <div class="srv-card-body">
+          <div class="srv-card-ico">🏢</div>
+          <h3>Post-Completion Facility Management</h3>
+          <p>Our relationship doesn't end at handover. We provide ongoing maintenance, repairs, and facility oversight to protect your investment and keep the building performing for years.</p>
+          <div class="srv-tags">
+            <span class="srv-tag">Maintenance</span>
+            <span class="srv-tag">Facility Mgmt</span>
+            <span class="srv-tag">Aftercare</span>
+          </div>
+          <div class="srv-cta-row">
+            <a href="index.html#contact" class="srv-cta-link">Request a Quote →</a>
+          </div>
+        </div>
+        <div class="srv-card-num">04</div>
+      </div>
+
+      <div class="srv-card reveal reveal-d2" data-cat="fabrication">
+        <div class="srv-card-img">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Fabrication and Installation"/>
+          <div class="srv-card-img-ov"></div>
+          <div class="srv-card-badge">Fabrication</div>
+        </div>
+        <div class="srv-card-body">
+          <div class="srv-card-ico">⚙️</div>
+          <h3>Fabrication and Installation of All Building Infrastructures</h3>
+          <p>In-house fabrication and installation covering aluminium, stainless steel, roofing, fencing, and every other structural and finishing element your building needs — made and fitted to spec.</p>
+          <div class="srv-tags">
+            <span class="srv-tag">Fabrication</span>
+            <span class="srv-tag">Installation</span>
+            <span class="srv-tag">All Infrastructure</span>
+          </div>
+          <div class="srv-cta-row">
+            <a href="index.html#contact" class="srv-cta-link">Request a Quote →</a>
+          </div>
+        </div>
+        <div class="srv-card-num">05</div>
+      </div>
+
+    </div><!-- /srv-grid -->
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="proc-header">
+      <div class="section-eyebrow reveal">How It Works</div>
+      <h2 class="section-title reveal reveal-d1">Our Simple <span>Process</span></h2>
+      <p class="section-sub reveal reveal-d2">Getting started is easy. We've refined our workflow over years of projects to make your experience smooth from first call to final handover.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step reveal reveal-d1">
+        <div class="proc-step-circle">
+          📞
+          <div class="proc-step-n">1</div>
+        </div>
+        <h4>Contact Us</h4>
+        <p>Call, WhatsApp, or email us with your project details. We respond fast and are ready to listen to your exact needs.</p>
+      </div>
+      <div class="proc-step reveal reveal-d2">
+        <div class="proc-step-circle">
+          📋
+          <div class="proc-step-n">2</div>
+        </div>
+        <h4>Site Assessment</h4>
+        <p>Our team visits your site, takes measurements, and assesses requirements to prepare an accurate, detailed quotation.</p>
+      </div>
+      <div class="proc-step reveal reveal-d3">
+        <div class="proc-step-circle">
+          🔧
+          <div class="proc-step-n">3</div>
+        </div>
+        <h4>Fabrication &amp; Supply</h4>
+        <p>We source the finest materials and fabricate your order to specification — with strict quality checks at every stage.</p>
+      </div>
+      <div class="proc-step reveal reveal-d4">
+        <div class="proc-step-circle">
+          ✅
+          <div class="proc-step-n">4</div>
+        </div>
+        <h4>Installation &amp; Handover</h4>
+        <p>Our skilled installation team works efficiently and tidily. We hand over on time and ensure you're 100% satisfied before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="why-split">
+      <div class="why-visual reveal">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&q=80" alt="Fadi Gaskiya Project"/>
+        <div class="why-visual-ov"></div>
+        <div class="why-badge">
+          <div class="why-badge-ico">🏆</div>
+          <div>
+            <div class="why-badge-t">The Best in Business</div>
+            <div class="why-badge-s">Sokoto State, Northwest Nigeria</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-content">
+        <div class="section-eyebrow reveal">Why Choose Us</div>
+        <h2 class="section-title reveal reveal-d1">Built On <span>Truth</span><br>&amp; Integrity</h2>
+        <p class="section-sub reveal reveal-d2" style="margin-top:16px;">Fadi Gaskiya means <em>truth</em>. It's not just our name — it's our operating principle. We never compromise on materials, workmanship, or timelines.</p>
+        <div class="why-list">
+          <div class="why-item reveal reveal-d1">
+            <div class="why-ico">🏆</div>
+            <div><h4>Industry Leader in Sokoto State</h4><p>Trusted by hundreds of property developers, homeowners, and businesses across Northwest Nigeria.</p></div>
+          </div>
+          <div class="why-item reveal reveal-d2">
+            <div class="why-ico">🔒</div>
+            <div><h4>Premium Quality Materials Only</h4><p>We source the highest-grade aluminium, stainless steel, and roofing products from verified suppliers.</p></div>
+          </div>
+          <div class="why-item reveal reveal-d3">
+            <div class="why-ico">⚡</div>
+            <div><h4>Fast, On-Time Project Delivery</h4><p>Consistently exceeding client expectations on timelines without cutting corners on quality.</p></div>
+          </div>
+          <div class="why-item reveal reveal-d4">
+            <div class="why-ico">📍</div>
+            <div><h4>Two Convenient Locations</h4><p>Main office at No. 11 Ahmadu Bello Way and a branch along Pinnacle Hotel Road, Tamaje — Sokoto State.</p></div>
+          </div>
+          <div class="why-item reveal reveal-d5">
+            <div class="why-ico">🌍</div>
+            <div><h4>Serving All of Nigeria</h4><p>With a reputation built on results, we serve clients across Nigeria and add lasting value to every project we touch.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-eyebrow reveal">Ready to Start?</div>
+      <h2 class="cta-h reveal reveal-d1">Get Your Free<br><span>Quote Today</span></h2>
+      <p class="cta-sub reveal reveal-d2">
+        Whether it's a single fabrication job or an entire estate build — we're ready to deliver. Call us or send a message and we'll respond within 24 hours.
+      </p>
+      <div class="cta-btns reveal reveal-d3">
+        <a href="index.html#contact" class="btn-gold">✦ Request a Quote</a>
+        <a href="tel:08038466792" class="cta-btn-ghost">📞 Call 08038466792</a>
+      </div>
+      <div class="cta-contacts reveal reveal-d4">
+        <div class="cta-contact-item">
+          📍 <span>No. 11 Ahmadu Bello Way, Sokoto State</span>
+        </div>
+        <div class="cta-contact-item">
+          ✉️ <a href="mailto:fadigaskiyaluminigltd@gmail.com">fadigaskiyaluminigltd@gmail.com</a>
+        </div>
+        <div class="cta-contact-item">
+          📞 <a href="tel:07036252792">07036252792</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark">FG</div>
+          <div class="logo-words"><span>Fadi Gaskiya</span><span>Aluminium Nig. Ltd</span></div>
+        </a>
+        <p>A household name in Nigeria's construction industry. From concept design through construction, engineering, fabrication, and facility management. Built on integrity since day one.</p>
+        <div class="foot-socials">
+          <a href="mailto:fadigaskiyaluminigltd@gmail.com" class="foot-soc" title="Email">✉️</a>
+          <a href="tel:08038466792" class="foot-soc" title="Call">📞</a>
+          <a href="#" class="foot-soc" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#features">About Us</a></li>
+          <li><a href="index.html#portfolio">Projects</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#services">Concept Design &amp; Planning</a></li>
+          <li><a href="#services">Building Construction</a></li>
+          <li><a href="#services">Civil Engineering</a></li>
+          <li><a href="#services">Facility Management</a></li>
+          <li><a href="#services">Fabrication &amp; Installation</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Newsletter</h5>
+        <p class="nl-label">Get updates on new services and projects.</p>
+        <div class="nl-wrap">
+          <input class="nl-input" type="email" placeholder="your@email.com" id="nlEmail">
+          <button class="nl-btn" onclick="nlSub()" title="Subscribe">→</button>
+        </div>
+        <div style="height:18px"></div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:08038466792">📞 08038466792</a></li>
+          <li><a href="tel:07036252792">📞 07036252792</a></li>
+          <li><a href="mailto:fadigaskiyaluminigltd@gmail.com" style="font-size:12px">✉️ fadigaskiyaluminigltd@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2025 Fadi Gaskiya Aluminium Company. All rights reserved.</p>
+      <p>The Best in Business · <a href="#">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const H=document.documentElement,togBtn=document.getElementById('tog'),togIco=document.getElementById('togIco');
+function setTheme(t){H.setAttribute('data-theme',t);togIco.textContent=t==='dark'?'☀️':'🌙';localStorage.setItem('fg-t',t);}
+const saved=localStorage.getItem('fg-t');
+setTheme(saved||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+togBtn.addEventListener('click',()=>setTheme(H.dataset.theme==='dark'?'light':'dark'));
+
+const cur=document.getElementById('cur'),ring=document.getElementById('curRing');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},90);
+});
+document.querySelectorAll('a,button,input,textarea,.srv-card,.why-item,.proc-step').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='44px';ring.style.height='44px';ring.style.borderColor='rgba(240,165,0,.5)';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(30,93,184,.6)';});
+});
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('stuck',scrollY>50);},{passive:true});
+
+const burger=document.getElementById('burger'),mob=document.getElementById('mobMenu');
+burger.addEventListener('click',()=>{burger.classList.toggle('x');mob.classList.toggle('open');});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('x');mob.classList.remove('open');}));
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('up');io.unobserve(e.target);}});
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function nlSub(){
+  const v=document.getElementById('nlEmail').value;
+  if(!v||!v.includes('@')){alert('Please enter a valid email.');return;}
+  alert('Thank you for subscribing! 🎉');
+  document.getElementById('nlEmail').value='';
+}
+</script>
+</body>
+</html>

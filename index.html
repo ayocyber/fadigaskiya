@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fadi Gaskiya Aluminium Company — Nigeria's premier building solutions company, from concept design to post-completion facility management. Built on truth, integrity, and excellence.">
+<title>Fadi Gaskiya Aluminium Company — The Best in Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-brand:#1e5db8; --blue-light:#2d7dd2; --blue-dark:#0e3a7a;
+  --gold:#f0a500; --gold-light:#ffc933; --gold-dark:#b87d00;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-xl:32px;
+  --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+}
+[data-theme="dark"] {
+  --bg:       #080f1e; --bg2:#0a1628; --bg3:#0d1e38; --bg4:#111e35;
+  --glass:    rgba(255,255,255,0.03); --glass-border:rgba(255,255,255,0.07);
+  --glass-hover:rgba(30,93,184,0.12); --glass-hover-border:rgba(30,93,184,0.35);
+  --nav-bg:   rgba(8,15,30,0.88); --nav-shadow:0 1px 0 rgba(255,255,255,0.05);
+  --text:     #ffffff; --text2:rgba(255,255,255,0.62); --text3:rgba(255,255,255,0.36);
+  --border:   rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --card-shadow:0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  --glow-blue:0 0 60px rgba(30,93,184,0.2); --glow-gold:0 0 40px rgba(240,165,0,0.15);
+  --footer:   #050b16;
+  --tog-bg:   rgba(255,255,255,0.08); --tog-border:rgba(255,255,255,0.15);
+  --input-bg: rgba(255,255,255,0.04); --input-border:rgba(255,255,255,0.1);
+  --input-focus:rgba(30,93,184,0.3);
+  --acc-bg:   rgba(255,255,255,0.02); --acc-border:rgba(255,255,255,0.06);
+}
+[data-theme="light"] {
+  --bg:#f0f4fb; --bg2:#e8eef8; --bg3:#dde6f5; --bg4:#d4dff0;
+  --glass:rgba(255,255,255,0.75); --glass-border:rgba(30,93,184,0.12);
+  --glass-hover:rgba(30,93,184,0.06); --glass-hover-border:rgba(30,93,184,0.28);
+  --nav-bg:rgba(240,244,251,0.92); --nav-shadow:0 1px 0 rgba(30,93,184,0.08);
+  --text:#0a1628; --text2:#2c4a7a; --text3:#6a86a8;
+  --border:rgba(30,93,184,0.10); --border2:rgba(30,93,184,0.18);
+  --card-shadow:0 20px 60px rgba(30,93,184,0.10), 0 0 0 1px rgba(30,93,184,0.08);
+  --glow-blue:0 0 40px rgba(30,93,184,0.08); --glow-gold:0 0 30px rgba(240,165,0,0.08);
+  --footer:#d0dcee;
+  --tog-bg:rgba(30,93,184,0.10); --tog-border:rgba(30,93,184,0.22);
+  --input-bg:rgba(255,255,255,0.9); --input-border:rgba(30,93,184,0.15);
+  --input-focus:rgba(30,93,184,0.2);
+  --acc-bg:rgba(255,255,255,0.6); --acc-border:rgba(30,93,184,0.10);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:inherit;}
+ul{list-style:none;}
+body,nav,section,footer,div,a,button,input,textarea,select{
+  transition:background-color .35s var(--ease-out),border-color .35s var(--ease-out),color .25s var(--ease-out),box-shadow .35s var(--ease-out);
+}
+.cur{width:10px;height:10px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .25s;}
+.cur-ring{width:32px;height:32px;border:1.5px solid rgba(30,93,184,0.6);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .12s ease,width .25s,height .25s,border-color .25s;}
+body:not(:hover) .cur{opacity:0;}
+.container{max-width:1260px;margin:0 auto;padding:0 48px;}
+.section-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.section-eyebrow::before{content:'';width:32px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,62px);line-height:.95;letter-spacing:1.5px;color:var(--text);}
+.section-title span{color:var(--gold);}
+.section-sub{font-size:16px;line-height:1.75;color:var(--text2);max-width:560px;}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s var(--ease-out),transform .75s var(--ease-out);}
+.reveal.up{opacity:1;transform:none;}
+.reveal-d1{transition-delay:.08s;}.reveal-d2{transition-delay:.16s;}.reveal-d3{transition-delay:.24s;}.reveal-d4{transition-delay:.32s;}.reveal-d5{transition-delay:.4s;}
+.gold-text{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#08111e;padding:15px 34px;border-radius:50px;font-size:14px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border:none;box-shadow:0 8px 28px rgba(240,165,0,0.38);transition:transform .28s var(--ease-bounce),box-shadow .28s;position:relative;overflow:hidden;}
+.btn-gold::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.22),transparent);opacity:0;transition:opacity .3s;}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(240,165,0,0.52);}
+.btn-gold:hover::before{opacity:1;}
+.btn-outline{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--text);padding:14px 32px;border-radius:50px;font-size:14px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1.5px solid var(--border2);backdrop-filter:blur(10px);transition:transform .28s var(--ease-bounce),border-color .28s,background .28s;}
+.btn-outline:hover{transform:translateY(-3px);border-color:var(--blue-light);background:rgba(30,93,184,0.1);}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,box-shadow .4s,padding .3s;}
+#nav.stuck{background:var(--nav-bg);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:var(--nav-shadow);padding:14px 48px;}
+.nav-logo{display:flex;align-items:center;gap:13px;}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:21px;color:#fff;box-shadow:0 4px 18px rgba(30,93,184,0.45);position:relative;overflow:hidden;flex-shrink:0;}
+.logo-mark::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.18),transparent);}
+.logo-words span:first-child{display:block;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2.5px;color:var(--text);line-height:1.1;}
+.logo-words span:last-child{display:block;font-size:9.5px;font-weight:600;letter-spacing:3.5px;color:var(--gold);text-transform:uppercase;}
+.nav-menu{display:flex;align-items:center;gap:36px;}
+.nav-menu a{font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text2);position:relative;transition:color .25s;}
+.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1.5px;background:var(--gold);border-radius:2px;transition:width .3s var(--ease-out);}
+.nav-menu a:hover,.nav-menu a.on{color:var(--text);}
+.nav-menu a:hover::after,.nav-menu a.on::after{width:100%;}
+.nav-actions{display:flex;align-items:center;gap:14px;}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#0a1628 !important;padding:10px 22px;border-radius:26px;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 4px 18px rgba(240,165,0,0.38);transition:transform .25s var(--ease-bounce),box-shadow .25s;}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(240,165,0,0.5);}
+.nav-cta::after{display:none !important;}
+.tog{width:44px;height:25px;background:var(--tog-bg);border:1.5px solid var(--tog-border);border-radius:20px;cursor:pointer;position:relative;outline:none;flex-shrink:0;}
+.tog-thumb{position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:var(--gold);box-shadow:0 2px 8px rgba(240,165,0,0.5);display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .4s var(--ease-bounce);}
+[data-theme="light"] .tog-thumb{transform:translateX(19px);}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .3s;}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.x span:nth-child(2){opacity:0;}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob-menu{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--nav-bg);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);z-index:999;align-items:center;justify-content:center;gap:28px;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-size:20px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);transition:color .2s;}
+.mob-menu a:hover{color:var(--gold);}
+@keyframes rise{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+@keyframes hpulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.7);opacity:.45;}}
+@keyframes imgPan{0%{transform:scale(1.06) translateX(0);}100%{transform:scale(1.06) translateX(-2%)}}
+#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;padding-top:0;}
+.hero-slides{position:absolute;inset:0;z-index:0;}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;}
+.hero-slide.active{opacity:1;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;animation:imgPan 14s ease-in-out alternate infinite;}
+.hero-ov1{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(5,10,22,.88) 0%,rgba(5,10,22,.60) 45%,rgba(5,10,22,.20) 100%);}
+.hero-ov2{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 70% 90% at 0% 100%,rgba(30,93,184,.35) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 90% 10%,rgba(240,165,0,.08) 0%,transparent 55%);}
+.hero-grain{position:absolute;inset:0;z-index:3;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:256px;pointer-events:none;}
+.hero-shine{position:absolute;left:0;right:0;height:1px;z-index:4;background:linear-gradient(90deg,transparent 5%,rgba(30,93,184,.55) 30%,rgba(240,165,0,.4) 50%,rgba(30,93,184,.55) 70%,transparent 95%);animation:h-shine 8s ease-in-out infinite;}
+@keyframes h-shine{0%,100%{top:22%;opacity:.25;}50%{top:68%;opacity:.55;}}
+.hero-inner{position:relative;z-index:10;flex:1;max-width:1260px;width:100%;margin:0 auto;padding:148px 56px 140px;display:flex;flex-direction:column;justify-content:center;}
+.hero-logo-badge{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:40px;padding:7px 18px 7px 7px;margin-bottom:32px;animation:rise .6s ease both;width:fit-content;}
+.hero-logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;flex-shrink:0;}
+.hero-logo-badge span{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.75);}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(58px,8.5vw,116px);line-height:.88;letter-spacing:2px;max-width:780px;animation:rise .75s .1s ease both;margin-bottom:26px;}
+.hero-h1 .l1{display:block;color:#fff;}
+.hero-h1 .l2{display:block;color:var(--gold);}
+.hero-h1 .l3{display:block;-webkit-text-stroke:2px rgba(255,255,255,.25);color:transparent;}
+.hero-desc{font-size:16px;line-height:1.82;color:rgba(255,255,255,.58);max-width:480px;margin-bottom:40px;animation:rise .75s .2s ease both;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;animation:rise .75s .3s ease both;margin-bottom:56px;}
+.hero-strip{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.10);padding-top:36px;animation:rise .75s .4s ease both;flex-wrap:wrap;}
+.hstat{padding-right:36px;margin-right:36px;border-right:1px solid rgba(255,255,255,.10);}
+.hstat:last-child{border-right:none;padding-right:0;margin-right:0;}
+.hstat-n{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--gold);line-height:1;}
+.hstat-l{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px;}
+.hero-pill-nav{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;background:rgba(8,15,30,.72);border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-radius:50px;padding:7px 8px;gap:2px;box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.04);animation:rise .75s .55s ease both;white-space:nowrap;}
+.pill-nav-logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:15px;color:#fff;flex-shrink:0;margin-right:6px;box-shadow:0 4px 14px rgba(30,93,184,.5);}
+.pill-nav-link{padding:8px 16px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.5);border-radius:30px;transition:color .22s,background .22s;}
+.pill-nav-link:hover{color:#fff;background:rgba(255,255,255,.07);}
+.pill-nav-divider{width:1px;height:18px;background:rgba(255,255,255,.1);margin:0 4px;}
+.pill-nav-cta{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#08111e !important;padding:9px 20px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 4px 18px rgba(240,165,0,.38);transition:transform .25s var(--ease-bounce),box-shadow .25s;margin-left:4px;}
+.pill-nav-cta:hover{transform:scale(1.04);box-shadow:0 8px 28px rgba(240,165,0,.5);}
+.hero-dots{position:absolute;right:56px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:10px;}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s;}
+.hero-dot.on{background:var(--gold);transform:scale(1.5);}
+.hero-badges{position:absolute;right:56px;bottom:120px;z-index:20;display:flex;flex-direction:column;gap:12px;animation:rise .75s .5s ease both;}
+.h-badge{display:flex;align-items:center;gap:11px;background:rgba(8,15,30,.70);border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:16px;padding:12px 16px;box-shadow:0 14px 40px rgba(0,0,0,.35);min-width:200px;}
+.h-badge-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.h-badge-ico.blue{background:linear-gradient(135deg,rgba(30,93,184,.5),rgba(45,125,210,.3));border:1px solid rgba(30,93,184,.4);}
+.h-badge-ico.gold{background:linear-gradient(135deg,rgba(240,165,0,.3),rgba(240,165,0,.14));border:1px solid rgba(240,165,0,.35);}
+.h-badge-t{font-size:12px;font-weight:700;color:#fff;line-height:1.2;}
+.h-badge-s{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px;}
+.h-pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:hpulse 2s infinite;box-shadow:0 0 8px rgba(240,165,0,.6);}
+@media(max-width:1100px){.hero-badges{display:none;}.hero-dots{right:24px;}}
+@media(max-width:768px){.hero-inner{padding:110px 24px 120px;}.hero-pill-nav{left:24px;right:24px;transform:none;bottom:24px;justify-content:center;flex-wrap:wrap;}.hero-dots{display:none;}}
+#trusted{padding:50px 0;background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.trust-inner{display:flex;align-items:center;gap:0;overflow:hidden;}
+.trust-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text3);white-space:nowrap;padding-right:40px;border-right:1px solid var(--border);margin-right:40px;flex-shrink:0;}
+.trust-track{display:flex;gap:56px;align-items:center;animation:trust-scroll 22s linear infinite;flex-shrink:0;}
+.trust-track-wrap{overflow:hidden;flex:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);}
+@keyframes trust-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.trust-item{display:flex;align-items:center;gap:10px;white-space:nowrap;opacity:.45;transition:opacity .3s;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--text);}
+.trust-item:hover{opacity:1;}
+.trust-icon{width:28px;height:28px;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+#services{padding:110px 0;background:var(--bg);}
+.srv-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:64px;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.srv-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out),box-shadow .35s,border-color .35s,background .35s;cursor:default;}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue-brand),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-out);}
+.srv-card:hover{transform:translateY(-7px);box-shadow:var(--card-shadow),var(--glow-blue);border-color:var(--glass-hover-border);background:var(--glass-hover);}
+.srv-card:hover::before{transform:scaleX(1);}
+.srv-card-num{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;color:var(--border);position:absolute;top:8px;right:16px;pointer-events:none;}
+.srv-card-ico{width:52px;height:52px;background:linear-gradient(135deg,rgba(30,93,184,.28),rgba(45,125,210,.18));border:1px solid rgba(30,93,184,.32);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.srv-card h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--text);}
+.srv-card p{font-size:13.5px;color:var(--text2);line-height:1.7;}
+.srv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+.srv-tag{font-size:11px;font-weight:600;color:var(--blue-light);background:rgba(30,93,184,.12);border:1px solid rgba(30,93,184,.22);padding:3px 10px;border-radius:20px;}
+#features{padding:110px 0;background:var(--bg2);}
+.feat-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.feat-split.rev{direction:rtl;}
+.feat-split.rev > *{direction:ltr;}
+.feat-visual{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--card-shadow);}
+.feat-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease-out);}
+.feat-visual:hover img{transform:scale(1.04);}
+.feat-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,93,184,.28),rgba(8,15,30,.2));}
+.feat-badge{position:absolute;bottom:20px;left:20px;background:rgba(8,15,30,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:11px;}
+.feat-badge-ico{width:34px;height:34px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.feat-badge-t{font-size:12px;font-weight:700;color:#fff;}
+.feat-badge-s{font-size:10.5px;color:rgba(255,255,255,.45);}
+.feat-content .section-sub{margin-top:16px;}
+.feat-list{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.feat-item{display:flex;gap:15px;align-items:flex-start;padding:16px;border-radius:var(--radius-md);background:var(--glass);border:1px solid var(--glass-border);transition:background .3s,border-color .3s,transform .3s;}
+.feat-item:hover{background:var(--glass-hover);border-color:var(--glass-hover-border);transform:translateX(5px);}
+.feat-ico{width:40px;height:40px;flex-shrink:0;background:linear-gradient(135deg,rgba(30,93,184,.3),rgba(45,125,210,.2));border:1px solid rgba(30,93,184,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.feat-item h4{font-size:14.5px;font-weight:700;margin-bottom:4px;color:var(--text);}
+.feat-item p{font-size:13px;color:var(--text2);line-height:1.6;}
+.feat-spacer{height:60px;}
+#stats{padding:90px 0;background:linear-gradient(135deg,var(--blue-brand),var(--blue-dark));position:relative;overflow:hidden;}
+#stats::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 15% 50%,rgba(255,255,255,.06) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 85% 50%,rgba(240,165,0,.10) 0%,transparent 60%);}
+.stats-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.stat-sep{width:1px;background:rgba(255,255,255,.15);height:80px;align-self:center;}
+.stat-box{text-align:center;padding:30px 20px;}
+.stat-box-n{font-family:'Bebas Neue',sans-serif;font-size:64px;line-height:1;color:#fff;display:block;}
+.stat-box-n span{color:var(--gold-light);}
+.stat-box-l{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:6px;}
+.stats-tagline{text-align:center;margin-top:50px;position:relative;z-index:1;}
+.stats-tagline p{font-size:17px;color:rgba(255,255,255,.62);font-weight:400;}
+.stats-tagline strong{color:#fff;}
+#testimonials{padding:110px 0;background:var(--bg);}
+.test-header{text-align:center;margin-bottom:64px;}
+.test-header .section-eyebrow{justify-content:center;}
+.test-header .section-eyebrow::before{display:none;}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.test-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px;position:relative;transition:transform .35s var(--ease-out),box-shadow .35s,border-color .35s;}
+.test-card:hover{transform:translateY(-6px);box-shadow:var(--card-shadow);border-color:var(--glass-hover-border);}
+.test-card.featured{background:linear-gradient(145deg,rgba(30,93,184,.18),rgba(8,15,30,.6));border-color:rgba(30,93,184,.32);box-shadow:var(--glow-blue);}
+.test-stars{display:flex;gap:3px;margin-bottom:18px;}
+.test-stars span{color:var(--gold);font-size:14px;}
+.test-quote{font-size:15px;line-height:1.75;color:var(--text2);margin-bottom:24px;font-style:italic;}
+.test-author{display:flex;align-items:center;gap:13px;}
+.test-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:#fff;flex-shrink:0;box-shadow:0 4px 14px rgba(30,93,184,.35);}
+.test-name{font-size:14px;font-weight:700;color:var(--text);}
+.test-role{font-size:12px;color:var(--text3);margin-top:2px;}
+.test-quote-mark{position:absolute;top:24px;right:28px;font-family:'Bebas Neue',sans-serif;font-size:80px;line-height:1;color:var(--border);pointer-events:none;}
+#portfolio{padding:110px 0;background:var(--bg2);}
+.port-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:20px;}
+.port-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;}
+.port-card{border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;box-shadow:var(--card-shadow);}
+.port-card.w8{grid-column:span 8;}
+.port-card.w4{grid-column:span 4;}
+.port-card.w6{grid-column:span 6;}
+.port-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-out);}
+.port-card:hover img{transform:scale(1.07);}
+.port-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,30,.88) 0%,rgba(8,15,30,.3) 50%,transparent 100%);opacity:0;transition:opacity .4s;}
+.port-card:hover .port-overlay{opacity:1;}
+.port-info{position:absolute;bottom:0;left:0;right:0;padding:24px;transform:translateY(8px);transition:transform .4s var(--ease-out);}
+.port-card:hover .port-info{transform:none;}
+.port-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.port-title{font-size:17px;font-weight:700;color:#fff;}
+.port-loc{font-size:12px;color:rgba(255,255,255,.55);margin-top:3px;}
+.port-h{height:260px;}
+.port-h2{height:320px;}
+#faq{padding:110px 0;background:var(--bg);}
+.faq-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+.faq-item{background:var(--acc-bg);border:1px solid var(--acc-border);border-radius:var(--radius-md);overflow:hidden;transition:border-color .3s,box-shadow .3s;}
+.faq-item.open{border-color:rgba(30,93,184,.3);box-shadow:var(--glow-blue);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;gap:16px;}
+.faq-q span{font-size:15px;font-weight:600;color:var(--text);line-height:1.4;}
+.faq-icon{width:28px;height:28px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text2);transition:transform .35s var(--ease-bounce),border-color .3s,background .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--gold);background:rgba(240,165,0,.12);color:var(--gold);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out);}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{padding:0 24px 20px;font-size:14px;line-height:1.75;color:var(--text2);}
+#contact{padding:110px 0;background:var(--bg2);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:72px;align-items:start;margin-top:56px;}
+.contact-info-cards{display:flex;flex-direction:column;gap:14px;}
+.ci-card{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:var(--radius-md);background:var(--glass);border:1px solid var(--glass-border);transition:background .3s,border-color .3s,transform .3s;}
+.ci-card:hover{background:var(--glass-hover);border-color:var(--glass-hover-border);transform:translateX(5px);}
+.ci-ico{width:44px;height:44px;flex-shrink:0;background:linear-gradient(135deg,var(--blue-brand),var(--blue-light));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 4px 16px rgba(30,93,184,.35);}
+.ci-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);margin-bottom:4px;}
+.ci-val{font-size:14px;font-weight:600;color:var(--text);line-height:1.5;}
+.ci-val a{color:var(--blue-light);transition:color .2s;}
+.ci-val a:hover{color:var(--gold);}
+.c-form{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-xl);padding:44px;}
+.c-form h3{font-size:22px;font-weight:700;margin-bottom:6px;color:var(--text);}
+.c-form p{font-size:14px;color:var(--text2);margin-bottom:30px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fg{margin-bottom:18px;}
+.fg label{display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--input-bg);border:1px solid var(--input-border);border-radius:var(--radius-sm);padding:13px 16px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .25s,box-shadow .25s,background .25s;}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--text3);}
+.fg select option{background:var(--bg2);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue-light);box-shadow:0 0 0 3px var(--input-focus);}
+.fg textarea{resize:vertical;min-height:118px;}
+.form-send{width:100%;margin-top:4px;font-size:14px;padding:16px;}
+.form-ok{display:none;background:rgba(30,93,184,.12);border:1px solid rgba(30,93,184,.3);border-radius:var(--radius-sm);padding:14px;margin-top:14px;font-size:13.5px;color:var(--blue-light);text-align:center;}
+footer{background:var(--footer);border-top:1px solid var(--border);padding:80px 0 36px;}
+.foot-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.4fr;gap:56px;margin-bottom:56px;}
+.foot-brand p{font-size:13.5px;line-height:1.8;color:var(--text2);margin:15px 0 22px;}
+.foot-socials{display:flex;gap:9px;}
+.foot-soc{width:38px;height:38px;background:var(--glass);border:1px solid var(--glass-border);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;transition:background .3s,border-color .3s,transform .3s;}
+.foot-soc:hover{background:rgba(30,93,184,.18);border-color:rgba(30,93,184,.38);transform:translateY(-3px);}
+.foot-col h5{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.foot-col ul li{margin-bottom:9px;}
+.foot-col ul li a{font-size:13.5px;color:var(--text2);transition:color .2s;}
+.foot-col ul li a:hover{color:var(--text);}
+.nl-wrap{position:relative;}
+.nl-input{width:100%;background:var(--input-bg);border:1px solid var(--input-border);border-radius:var(--radius-md);padding:12px 52px 12px 15px;font-family:'Outfit',sans-serif;font-size:13px;color:var(--text);outline:none;transition:border-color .25s,box-shadow .25s;}
+.nl-input::placeholder{color:var(--text3);}
+.nl-input:focus{border-color:var(--blue-light);box-shadow:0 0 0 3px var(--input-focus);}
+.nl-btn{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:34px;height:34px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;transition:transform .25s,box-shadow .25s;}
+.nl-btn:hover{transform:translateY(-50%) scale(1.08);box-shadow:0 4px 14px rgba(240,165,0,.4);}
+.nl-label{font-size:12px;color:var(--text2);margin-bottom:10px;}
+.foot-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.foot-bottom p{font-size:12.5px;color:var(--text3);}
+.foot-bottom a{color:var(--gold);}
+.sec-div{height:1px;background:linear-gradient(90deg,transparent,var(--border) 30%,var(--border) 70%,transparent);}
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr;}.hero-scene{display:none;}
+  .srv-grid{grid-template-columns:repeat(2,1fr);}
+  .feat-split,.feat-split.rev{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .test-grid{grid-template-columns:repeat(2,1fr);}
+  .port-card.w8,.port-card.w4,.port-card.w6{grid-column:span 6;}
+  .faq-inner{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .srv-header{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  #nav{padding:16px 24px;}#nav.stuck{padding:12px 24px;}
+  .nav-menu,.nav-cta,.tog{display:none;}
+  .burger{display:flex;z-index:1001;}
+  .container{padding:0 24px;}
+  .hero-inner{padding:110px 24px 60px;}
+  .hero-strip{flex-wrap:wrap;gap:18px;}
+  .srv-grid{grid-template-columns:1fr;}
+  .test-grid{grid-template-columns:1fr;}
+  .port-card.w8,.port-card.w4,.port-card.w6{grid-column:span 12;}
+  .port-h,.port-h2{height:200px;}
+  .form-row{grid-template-columns:1fr;}
+  .c-form{padding:28px 22px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">FG</div>
+    <div class="logo-words">
+      <span>Fadi Gaskiya</span>
+      <span> Aluminium Company</span>
+    </div>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="on">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#features">About</a></li>
+    <li><a href="#portfolio">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <ul class="nav-menu" style="gap:0">
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="tog" id="tog" aria-label="Toggle theme">
+      <div class="tog-thumb"><span id="togIco">☀️</span></div>
+    </button>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#features">About</a>
+  <a href="#portfolio">Projects</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn-gold" style="margin-top:8px">Get a Quote →</a>
+</div>
+
+<section id="hero">
+
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=85" alt="Stainless steel railings construction"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1593164842264-854604db2260?w=1600&q=85" alt="Premium aluminium fabrication"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1600&q=85" alt="Modern construction building"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85" alt="Roofing and building exterior"/>
+    </div>
+  </div>
+
+  <div class="hero-ov1"></div>
+  <div class="hero-ov2"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-shine"></div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot on" data-i="0"></button>
+    <button class="hero-dot" data-i="1"></button>
+    <button class="hero-dot" data-i="2"></button>
+    <button class="hero-dot" data-i="3"></button>
+  </div>
+
+  <div class="hero-badges">
+    <div class="h-badge">
+      <div class="h-badge-ico blue">🏗️</div>
+      <div>
+        <div class="h-badge-t">500+ Projects</div>
+        <div class="h-badge-s">Delivered across Nigeria</div>
+      </div>
+    </div>
+    <div class="h-badge">
+      <div class="h-badge-ico gold">⭐</div>
+      <div>
+        <div class="h-badge-t">100% Client Satisfaction</div>
+        <div class="h-badge-s">Built on truth & integrity</div>
+      </div>
+    </div>
+    <div class="h-badge" style="align-items:center;">
+      <div class="h-pulse"></div>
+      <div>
+        <div class="h-badge-t">Now Accepting Projects</div>
+        <div class="h-badge-s">Sokoto State · Nigeria</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-inner">
+
+    <div class="hero-logo-badge">
+      <div class="hero-logo-mark">FG</div>
+      <span>Fadi Gaskiya Aluminium Company</span>
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="l1">The</span>
+      <span class="l2">Best In</span>
+      <span class="l3">Business</span>
+    </h1>
+
+    <p class="hero-desc">From concept design to construction, civil engineering, fabrication, and post-completion facility management. A household name in Nigeria's construction industry — built on truth, integrity, and excellence.</p>
+
+    <div class="hero-ctas">
+      <a href="services.html" class="btn-gold">Explore Services →</a>
+      <a href="#contact" class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.22);">Get a Free Quote ↗</a>
+    </div>
+
+    <div class="hero-strip">
+      <div class="hstat"><div class="hstat-n" data-count="10" data-suf="+">0+</div><div class="hstat-l">Years Active</div></div>
+      <div class="hstat"><div class="hstat-n" data-count="500" data-suf="+">0+</div><div class="hstat-l">Projects Done</div></div>
+      <div class="hstat"><div class="hstat-n" data-count="5" data-suf="">0</div><div class="hstat-l">Services</div></div>
+      <div class="hstat"><div class="hstat-n" data-count="2" data-suf="">0</div><div class="hstat-l">Locations</div></div>
+    </div>
+
+  </div>
+
+  <nav class="hero-pill-nav">
+    <div class="pill-nav-logo">FG</div>
+    <a href="#" class="pill-nav-link">Home</a>
+    <a href="#services" class="pill-nav-link">Services</a>
+    <div class="pill-nav-divider"></div>
+    <a href="#features" class="pill-nav-link">About</a>
+    <a href="#portfolio" class="pill-nav-link">Projects</a>
+    <div class="pill-nav-divider"></div>
+    <a href="#contact" class="pill-nav-cta">Get a Quote →</a>
+  </nav>
+
+</section>
+
+<div id="trusted">
+  <div class="container">
+    <div class="trust-inner">
+      <span class="trust-label">Trusted By</span>
+      <div class="trust-track-wrap">
+        <div class="trust-track" id="ttrack">
+          <span class="trust-item"><span class="trust-icon">🏗️</span>Sokoto Gov't</span>
+          <span class="trust-item"><span class="trust-icon">🏢</span>Pinnacle Hotels</span>
+          <span class="trust-item"><span class="trust-icon">🏠</span>Tamaje Estates</span>
+          <span class="trust-item"><span class="trust-icon">⚡</span>NW Power Group</span>
+          <span class="trust-item"><span class="trust-icon">🔩</span>BuildCo Nigeria</span>
+          <span class="trust-item"><span class="trust-icon">🏗️</span>Arewa Properties</span>
+          <span class="trust-item"><span class="trust-icon">🏢</span>Sunrise Developers</span>
+          <span class="trust-item"><span class="trust-icon">🏠</span>Gusau Contractors</span>
+          <span class="trust-item"><span class="trust-icon">🏗️</span>Sokoto Gov't</span>
+          <span class="trust-item"><span class="trust-icon">🏢</span>Pinnacle Hotels</span>
+          <span class="trust-item"><span class="trust-icon">🏠</span>Tamaje Estates</span>
+          <span class="trust-item"><span class="trust-icon">⚡</span>NW Power Group</span>
+          <span class="trust-item"><span class="trust-icon">🔩</span>BuildCo Nigeria</span>
+          <span class="trust-item"><span class="trust-icon">🏗️</span>Arewa Properties</span>
+          <span class="trust-item"><span class="trust-icon">🏢</span>Sunrise Developers</span>
+          <span class="trust-item"><span class="trust-icon">🏠</span>Gusau Contractors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+<div class="srv-header">
+  <div>
+    <div class="section-eyebrow reveal">What We Do</div>
+    <h2 class="section-title reveal reveal-d1">Design, Build <span>& Manage</span></h2>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:20px;">
+    <p class="section-sub reveal reveal-d2" style="text-align:right;">From first concept to post-completion facility care — we deliver complete building solutions across Nigeria with unmatched quality and integrity.</p>
+    <a href="services.html" class="btn-outline reveal reveal-d3" style="width:fit-content;">View All Services &nbsp;→</a>
+  </div>
+</div>
+    <div class="srv-grid">
+      <div class="srv-card reveal reveal-d1">
+        <div class="srv-card-num">01</div>
+        <div class="srv-card-ico">📐</div>
+        <h3>Concept Design &amp; Planning</h3>
+        <p>End-to-end concept design and planning — shaping your project's layout, specifications, and budget before ground is broken.</p>
+        <div class="srv-tags"><span class="srv-tag">Concept Design</span><span class="srv-tag">Planning</span><span class="srv-tag">Feasibility</span></div>
+      </div>
+      <div class="srv-card reveal reveal-d2">
+        <div class="srv-card-num">02</div>
+        <div class="srv-card-ico">🏗️</div>
+        <h3>Building Construction &amp; Execution</h3>
+        <p>Seamless construction management from groundbreaking to handover, coordinating materials, labour, and timelines on-site.</p>
+        <div class="srv-tags"><span class="srv-tag">Construction</span><span class="srv-tag">Site Mgmt</span><span class="srv-tag">Execution</span></div>
+      </div>
+      <div class="srv-card reveal reveal-d3">
+        <div class="srv-card-num">03</div>
+        <div class="srv-card-ico">🛠️</div>
+        <h3>Civil Engineering &amp; Infrastructure</h3>
+        <p>Civil engineering and infrastructure integration — structural, drainage, road, and utility works engineered to code.</p>
+        <div class="srv-tags"><span class="srv-tag">Civil Works</span><span class="srv-tag">Infrastructure</span><span class="srv-tag">Structural</span></div>
+      </div>
+      <div class="srv-card reveal reveal-d1">
+        <div class="srv-card-num">04</div>
+        <div class="srv-card-ico">🏢</div>
+        <h3>Post-Completion Facility Management</h3>
+        <p>Our relationship doesn't end at handover — ongoing maintenance, repairs, and facility oversight to protect your investment.</p>
+        <div class="srv-tags"><span class="srv-tag">Maintenance</span><span class="srv-tag">Facility Mgmt</span><span class="srv-tag">Aftercare</span></div>
+      </div>
+      <div class="srv-card reveal reveal-d2">
+        <div class="srv-card-num">05</div>
+        <div class="srv-card-ico">⚙️</div>
+        <h3>Fabrication &amp; Installation</h3>
+        <p>In-house fabrication and installation of all building infrastructure — aluminium, stainless steel, roofing, fencing, and more.</p>
+        <div class="srv-tags"><span class="srv-tag">Fabrication</span><span class="srv-tag">Installation</span><span class="srv-tag">All Infrastructure</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div"></div>
+
+<section id="features">
+  <div class="container">
+
+    <div class="feat-split">
+      <div class="feat-visual reveal">
+        <img src="https://images.unsplash.com/photo-1593164842264-854604db2260?w=700&q=80" alt="Premium aluminium work"/>
+        <div class="feat-overlay"></div>
+        <div class="feat-badge">
+          <div class="feat-badge-ico">🏆</div>
+          <div><div class="feat-badge-t">Industry Leading</div><div class="feat-badge-s">Nigeria's Construction Sector</div></div>
+        </div>
+      </div>
+      <div class="feat-content">
+        <div class="section-eyebrow reveal">Who We Are</div>
+        <h2 class="section-title reveal reveal-d1">Built On <span>Truth</span><br>& Integrity</h2>
+        <p class="section-sub reveal reveal-d2">Fadi Gaskiya Aluminium Company has become a household name in the Nigerian construction industry. Our name literally means "truth" — and we live it every day.</p>
+        <div class="feat-list">
+          <div class="feat-item reveal reveal-d1">
+            <div class="feat-ico">🏆</div>
+            <div><h4>Industry Leaders</h4><p>Ranked among the best construction firms in Sokoto State and Northwest Nigeria.</p></div>
+          </div>
+          <div class="feat-item reveal reveal-d2">
+            <div class="feat-ico">⚡</div>
+            <div><h4>Fast Project Delivery</h4><p>On-time, within-budget project completion is our core commitment to every client.</p></div>
+          </div>
+          <div class="feat-item reveal reveal-d3">
+            <div class="feat-ico">🔒</div>
+            <div><h4>Premium Quality Materials</h4><p>Only the highest-grade aluminium, stainless steel, and roofing materials from trusted suppliers.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-spacer"></div>
+
+    <div class="feat-split rev">
+      <div class="feat-visual reveal">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&q=80" alt="Completed construction project"/>
+        <div class="feat-overlay"></div>
+        <div class="feat-badge">
+          <div class="feat-badge-ico">📍</div>
+          <div><div class="feat-badge-t">2 Locations</div><div class="feat-badge-s">Serving All of Sokoto State</div></div>
+        </div>
+      </div>
+      <div class="feat-content">
+        <div class="section-eyebrow reveal">Our Vision</div>
+        <h2 class="section-title reveal reveal-d1">Leading <span>Nigeria's</span><br>Construction Future</h2>
+        <p class="section-sub reveal reveal-d2">We aspire to be at the forefront of Nigeria's construction industry — delivering iconic projects that enhance lives and add lasting value to communities.</p>
+        <div class="feat-list">
+          <div class="feat-item reveal reveal-d1">
+            <div class="feat-ico">🎯</div>
+            <div><h4>Customer Satisfaction First</h4><p>Long-term relationships built on transparency and results that exceed expectations.</p></div>
+          </div>
+          <div class="feat-item reveal reveal-d2">
+            <div class="feat-ico">🚀</div>
+            <div><h4>Continuous Innovation</h4><p>Constantly improving our processes, adopting the latest materials and installation techniques.</p></div>
+          </div>
+          <div class="feat-item reveal reveal-d3">
+            <div class="feat-ico">🌍</div>
+            <div><h4>Nationwide Reach</h4><p>Serving clients across Nigeria with two strategically located offices in Sokoto State.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-box-n"><span data-count="10" data-suf="+">0</span></span>
+        <div class="stat-box-l">Years of Excellence</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-n"><span data-count="500" data-suf="+">0</span></span>
+        <div class="stat-box-l">Projects Completed</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-n"><span data-count="5" data-suf="">0</span></span>
+        <div class="stat-box-l">Services Offered</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box-n"><span data-count="100" data-suf="%">0</span></span>
+        <div class="stat-box-l">Client Satisfaction</div>
+      </div>
+    </div>
+    <div class="stats-tagline">
+      <p><strong>Fadi Gaskiya</strong> — the name that means <strong>truth</strong>. Our numbers speak for themselves.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="test-header">
+      <div class="section-eyebrow reveal">Client Reviews</div>
+      <h2 class="section-title reveal reveal-d1">What Our <span>Clients Say</span></h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal reveal-d1">
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="test-quote">"The aluminium profiles Fadi Gaskiya installed for our office complex are absolutely world class. The team was professional, punctual, and the finish exceeded all our expectations."</p>
+        <div class="test-author">
+          <div class="test-avatar">AM</div>
+          <div><div class="test-name">Alhaji Mustapha</div><div class="test-role">Property Developer, Sokoto</div></div>
+        </div>
+      </div>
+      <div class="test-card featured reveal reveal-d2">
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="test-quote">"We brought them in from concept design through construction on our estate. Not only was the work impeccable, they finished 3 days ahead of schedule. Truly the best in business!"</p>
+        <div class="test-author">
+          <div class="test-avatar">FA</div>
+          <div><div class="test-name">Fatima Abdullahi</div><div class="test-role">Estate Manager, Tamaje</div></div>
+        </div>
+      </div>
+      <div class="test-card reveal reveal-d3">
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="test-quote">"Their stainless steel railings transformed my entire building. The quality is unmatched anywhere in Sokoto. I've already recommended them to five of my colleagues."</p>
+        <div class="test-author">
+          <div class="test-avatar">IB</div>
+          <div><div class="test-name">Ibrahim Bello</div><div class="test-role">Architect, Northwest Nigeria</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="port-header">
+      <div>
+        <div class="section-eyebrow reveal">Our Work</div>
+        <h2 class="section-title reveal reveal-d1">Recent <span>Projects</span></h2>
+      </div>
+      <a href="#contact" class="btn-outline reveal">View All Projects →</a>
+    </div>
+    <div class="port-grid">
+      <div class="port-card w8 port-h2 reveal reveal-d1">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Stainless Steel Railings"/>
+        <div class="port-overlay"></div>
+        <div class="port-info">
+          <div class="port-cat">Fabrication</div>
+          <div class="port-title">Premium Residential Railings</div>
+          <div class="port-loc">📍 Sokoto State, Nigeria</div>
+        </div>
+      </div>
+      <div class="port-card w4 port-h2 reveal reveal-d2">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Gerald Roofing"/>
+        <div class="port-overlay"></div>
+        <div class="port-info">
+          <div class="port-cat">Construction</div>
+          <div class="port-title">Executive Villa Roofing</div>
+          <div class="port-loc">📍 Tamaje, Sokoto</div>
+        </div>
+      </div>
+      <div class="port-card w4 port-h reveal reveal-d1">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=80" alt="Aluminium Profiles"/>
+        <div class="port-overlay"></div>
+        <div class="port-info">
+          <div class="port-cat">Fabrication</div>
+          <div class="port-title">Commercial Complex Facade</div>
+          <div class="port-loc">📍 Sokoto, Nigeria</div>
+        </div>
+      </div>
+      <div class="port-card w4 port-h reveal reveal-d2">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=80" alt="Civil Engineering"/>
+        <div class="port-overlay"></div>
+        <div class="port-info">
+          <div class="port-cat">Civil Engineering</div>
+          <div class="port-title">Estate Drainage &amp; Roads</div>
+          <div class="port-loc">📍 Sokoto State</div>
+        </div>
+      </div>
+      <div class="port-card w4 port-h reveal reveal-d3">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&q=80" alt="Construction site"/>
+        <div class="port-overlay"></div>
+        <div class="port-info">
+          <div class="port-cat">Construction</div>
+          <div class="port-title">Multi-Unit Residential Build</div>
+          <div class="port-loc">📍 Sokoto, Nigeria</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="faq-inner">
+      <div>
+        <div class="section-eyebrow reveal">FAQ</div>
+        <h2 class="section-title reveal reveal-d1">Questions <span>Answered</span></h2>
+        <p class="section-sub reveal reveal-d2" style="margin-top:16px">Everything you need to know before starting your project with us.</p>
+        <div style="margin-top:36px" class="reveal reveal-d3">
+          <a href="#contact" class="btn-gold">Still have questions? Contact us →</a>
+        </div>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-q"><span>What areas do you serve?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>We are based in Sokoto State with two locations — our head office at No. 11 Ahmadu Bello Way and our branch along Pinnacle Hotel Road, Tamaje. We serve clients across all of Sokoto State and take on projects throughout Northwest Nigeria.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>How do I get a quote for my project?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Simply fill out our contact form below or call us directly at 08038466792 / 07036252792. We offer free consultations and will provide a detailed, transparent quote within 24–48 hours of your inquiry.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Can you handle a project from design through to completion?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Yes. We offer end-to-end concept design and planning, construction and execution, civil engineering and infrastructure work, plus fabrication and installation — so one team can carry your project from first sketch to finished building.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>How long does a typical project take?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Project timelines vary based on scope. Small fabrication jobs typically take 3–7 days. Larger construction and civil engineering projects can take several weeks to months. We commit to every agreed timeline and have a strong track record of on-time delivery.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Do you provide a warranty on your work?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Yes. All our construction and fabrication work comes with a warranty. Structural and installation work carries a 2-year workmanship warranty, and roofing systems are backed by the manufacturer's warranty plus our installation guarantee.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>What happens after my building is completed?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Our relationship doesn't end at handover. Through our post-completion facility management service, we provide ongoing maintenance, repairs, and facility oversight to protect your investment for years to come.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-eyebrow reveal" style="justify-content:center">Get In Touch</div>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center">Request a <span>Free Quote</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-cards">
+          <div class="ci-card reveal reveal-d1">
+            <div class="ci-ico">📍</div>
+            <div><div class="ci-label">Head Office</div><div class="ci-val">No. 11 Ahmadu Bello Way,<br>Sokoto State, Nigeria</div></div>
+          </div>
+          <div class="ci-card reveal reveal-d2">
+            <div class="ci-ico">🏢</div>
+            <div><div class="ci-label">Branch Office</div><div class="ci-val">Along Pinnacle Hotel Road,<br>Tamaje, Sokoto State</div></div>
+          </div>
+          <div class="ci-card reveal reveal-d3">
+            <div class="ci-ico">📞</div>
+            <div><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:08038466792">08038466792</a> · <a href="tel:07036252792">07036252792</a></div></div>
+          </div>
+          <div class="ci-card reveal reveal-d4">
+            <div class="ci-ico">✉️</div>
+            <div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:fadigaskiyaluminigltd@gmail.com">fadigaskiyaluminigltd@gmail.com</a></div></div>
+          </div>
+          <div class="ci-card reveal reveal-d5">
+            <div class="ci-ico">🕐</div>
+            <div><div class="ci-label">Working Hours</div><div class="ci-val">Monday – Saturday: 8:00 AM – 6:00 PM<br>Sunday: By Appointment</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-form reveal reveal-d2">
+        <h3>Send Us a Message</h3>
+        <p>We'll respond with a detailed quote within 24 hours.</p>
+        <div class="form-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="Musa" id="fn"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Abdullahi" id="ln"></div>
+        </div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="080XXXXXXXX" id="ph"></div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com" id="em"></div>
+        <div class="fg">
+          <label>Service Required</label>
+          <select id="sv">
+            <option value="">Select a service…</option>
+            <option>End-to-End Concept Design &amp; Planning</option>
+            <option>Building Construction &amp; Execution</option>
+            <option>Civil Engineering &amp; Infrastructure Integration</option>
+            <option>Post-Completion Facility Management</option>
+            <option>Fabrication &amp; Installation of Building Infrastructure</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message</label><textarea id="msg" placeholder="Tell us about your project, location, and requirements…"></textarea></div>
+        <button class="btn-gold form-send" onclick="sendForm()">Send Message ✦</button>
+        <div class="form-ok" id="fok">✅ Thank you! We'll contact you within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="nav-logo">
+          <div class="logo-mark">FG</div>
+          <div class="logo-words"><span>Fadi Gaskiya</span><span>Aluminium Nig. Ltd</span></div>
+        </a>
+        <p>A household name in Nigeria's construction industry. From concept design through construction, engineering, fabrication, and facility management. Built on integrity since day one.</p>
+        <div class="foot-socials">
+          <a href="mailto:fadigaskiyaluminigltd@gmail.com" class="foot-soc" title="Email">✉️</a>
+          <a href="tel:08038466792" class="foot-soc" title="Call">📞</a>
+          <a href="#" class="foot-soc" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#features">About Us</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Concept Design &amp; Planning</a></li>
+          <li><a href="#services">Building Construction</a></li>
+          <li><a href="#services">Civil Engineering</a></li>
+          <li><a href="#services">Facility Management</a></li>
+          <li><a href="#services">Fabrication &amp; Installation</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Newsletter</h5>
+        <p class="nl-label">Get updates on new services and projects.</p>
+        <div class="nl-wrap">
+          <input class="nl-input" type="email" placeholder="your@email.com" id="nlEmail">
+          <button class="nl-btn" onclick="nlSub()" title="Subscribe">→</button>
+        </div>
+        <div style="height:18px"></div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:08038466792">📞 08038466792</a></li>
+          <li><a href="tel:07036252792">📞 07036252792</a></li>
+          <li><a href="mailto:fadigaskiyaluminigltd@gmail.com" style="font-size:12px">✉️ fadigaskiyaluminigltd@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2025 Fadi Gaskiya Aluminium Company. All rights reserved.</p>
+      <p>The Best in Business · <a href="#">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const H=document.documentElement,togBtn=document.getElementById('tog'),togIco=document.getElementById('togIco');
+function setTheme(t){H.setAttribute('data-theme',t);togIco.textContent=t==='dark'?'☀️':'🌙';localStorage.setItem('fg-t',t);}
+const saved=localStorage.getItem('fg-t');
+setTheme(saved||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+togBtn.addEventListener('click',()=>setTheme(H.dataset.theme==='dark'?'light':'dark'));
+
+const cur=document.getElementById('cur'),ring=document.getElementById('curRing');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},90);
+});
+document.querySelectorAll('a,button,input,textarea,select,.srv-card,.test-card,.port-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='44px';ring.style.height='44px';ring.style.borderColor='rgba(240,165,0,.5)';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(30,93,184,.6)';});
+});
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('stuck',scrollY>50);},{ passive:true });
+
+const burger=document.getElementById('burger'),mob=document.getElementById('mobMenu');
+burger.addEventListener('click',()=>{burger.classList.toggle('x');mob.classList.toggle('open');});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('x');mob.classList.remove('open');}));
+
+const slides=document.querySelectorAll('.hero-slide');
+const dots=document.querySelectorAll('.hero-dot');
+let cur_s=0,slideTimer;
+function goSlide(n){
+  slides[cur_s].classList.remove('active');
+  dots[cur_s].classList.remove('on');
+  cur_s=n;
+  slides[cur_s].classList.add('active');
+  dots[cur_s].classList.add('on');
+}
+function nextSlide(){goSlide((cur_s+1)%slides.length);}
+dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(slideTimer);goSlide(+d.dataset.i);slideTimer=setInterval(nextSlide,5500);}));
+slideTimer=setInterval(nextSlide,5500);
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('up');io.unobserve(e.target);}});
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function countUp(el,end,suf){
+  let c=0;const step=end/55,t=setInterval(()=>{
+    c=Math.min(c+step,end);el.textContent=Math.floor(c)+suf;
+    if(c>=end)clearInterval(t);
+  },22);
+}
+const cio=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('[data-count]').forEach(n=>{
+        countUp(n,+n.dataset.count,n.dataset.suf||'');
+      });
+      cio.unobserve(e.target);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.hero-strip,#stats').forEach(el=>cio.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+
+function sendForm(){
+  const fn=document.getElementById('fn').value,ph=document.getElementById('ph').value;
+  if(!fn.trim()||!ph.trim()){alert('Please enter your name and phone number.');return;}
+  document.getElementById('fok').style.display='block';
+  ['fn','ln','ph','em','sv','msg'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el.tagName==='SELECT')el.selectedIndex=0; else el.value='';
+  });
+  setTimeout(()=>{document.getElementById('fok').style.display='none';},5000);
+}
+
+function nlSub(){
+  const v=document.getElementById('nlEmail').value;
+  if(!v||!v.includes('@')){alert('Please enter a valid email.');return;}
+  alert('Thank you for subscribing! 🎉');
+  document.getElementById('nlEmail').value='';
+}
+
+const secs=['hero','services','features','stats','testimonials','portfolio','faq','contact'];
+const navLinks=document.querySelectorAll('.nav-menu a');
+const sio=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      navLinks.forEach(a=>{
+        a.classList.toggle('on',a.getAttribute('href')==='#'+id||(id==='hero'&&a.getAttribute('href')==='#'));
+      });
+    }
+  });
+},{threshold:.4});
+secs.forEach(id=>{const el=document.getElementById(id);if(el)sio.observe(el);});
+</script>
+</body>
+</html>
