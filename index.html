@@ -149,7 +149,10 @@ body:not(:hover) .cur{opacity:0;}
 .h-badge-s{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px;}
 .h-pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:hpulse 2s infinite;box-shadow:0 0 8px rgba(240,165,0,.6);}
 @media(max-width:1100px){.hero-badges{display:none;}.hero-dots{right:24px;}}
-@media(max-width:768px){.hero-inner{padding:110px 24px 120px;}.hero-pill-nav{left:24px;right:24px;transform:none;bottom:24px;justify-content:center;flex-wrap:wrap;}.hero-dots{display:none;}}
+@media(max-width:768px){.hero-inner{padding:110px 24px 100px;}.hero-pill-nav{display:none;}.hero-dots{display:none;}}
+.hero-tag-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.14);border:1px solid rgba(240,165,0,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:40px;padding:8px 18px;margin-bottom:22px;animation:rise .6s .05s ease both;width:fit-content;}
+.hero-tag-pill span{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-light);}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:hpulse 2.2s infinite;}
 #trusted{padding:50px 0;background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .trust-inner{display:flex;align-items:center;gap:0;overflow:hidden;}
 .trust-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text3);white-space:nowrap;padding-right:40px;border-right:1px solid var(--border);margin-right:40px;flex-shrink:0;}
@@ -424,6 +427,11 @@ footer{background:var(--footer);border-top:1px solid var(--border);padding:80px 
     <div class="hero-logo-badge">
       <div class="hero-logo-mark">FG</div>
       <span>Fadi Gaskiya Aluminium Company</span>
+    </div>
+
+    <div class="hero-tag-pill">
+      <span class="hero-tag-dot"></span>
+      <span>Partner for Progress</span>
     </div>
 
     <h1 class="hero-h1">
